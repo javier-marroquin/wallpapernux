@@ -29,6 +29,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.plasmoid
+import org.kde.kwindowsystem
 import "code/utils.js" as Utils
 import "code/enum.js" as Enum
 
@@ -96,6 +97,10 @@ WallpaperItem {
             pause = windowModel.visibleExists;
             break;
         case Enum.PauseMode.Never:
+            pause = false;
+        }
+        // windows are moved away but not minimized while the desktop is shown
+        if (pause && main.configuration.ShowDesktopPlaysVideo && KWindowSystem.showingDesktop) {
             pause = false;
         }
         return !pause;

@@ -77,8 +77,13 @@
     <entry name="EffectsPauseVideo" type="String">
       <default></default>
     </entry>
+    <!-- monitoring effects polls KWin every 100ms, keep empty unless needed -->
     <entry name="EffectsPlayVideo" type="String">
-      <default>windowaperture</default>
+      <default></default>
+    </entry>
+    <entry name="ShowDesktopPlaysVideo" type="Bool">
+      <label>Ignore windows when pausing the video while the desktop is shown</label>
+      <default>true</default>
     </entry>
     <entry name="EffectsHideBlur" type="String">
       <default></default>

@@ -70,6 +70,7 @@ ColumnLayout {
     property alias cfg_CrossfadeEnabled: crossfadeEnabledCheckbox.checked
     property alias cfg_CrossfadeDuration: crossfadeDurationSpinBox.value
     property alias cfg_LoadAheadTime: loadAheadTimeSpinBox.value
+    property alias cfg_ShowDesktopPlaysVideo: showDesktopPlaysVideoCheckbox.checked
     property alias cfg_OptimizeVideos: optimizeVideosCheckbox.checked
     property alias cfg_OptimizeDownscale: optimizeDownscaleCheckbox.checked
     property alias cfg_OptimizeLimitFps: optimizeLimitFpsCheckbox.checked
@@ -962,6 +963,12 @@ ColumnLayout {
             Component.onCompleted: {
                 currentIndex = model.findIndex(mode => mode.value === root.cfg_PauseMode);
             }
+        }
+
+        CheckBox {
+            id: showDesktopPlaysVideoCheckbox
+            text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Play while showing the desktop")
+            visible: !root.isLockScreenSettings && root.currentTab === 1 && root.cfg_PauseMode !== Enum.PauseMode.Never
         }
 
         ComboBox {
