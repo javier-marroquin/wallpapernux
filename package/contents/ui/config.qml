@@ -41,7 +41,7 @@ ColumnLayout {
     property var configDialog: null
     property var wallpaperConfiguration: wallpaper.configuration
     property int cfg_FillMode: 2
-    property int cfg_PauseMode: 0
+    property int cfg_PauseMode: 2
     property int cfg_AlternativePlaybackRateMode: 3
     property string cfg_AudioOutputDevice: ""
     property int cfg_BlurMode: 5
@@ -905,7 +905,7 @@ ColumnLayout {
                 icon.name: "edit-undo-symbolic"
                 flat: true
                 onClicked: {
-                    optimizeMaxFpsSpinBox.value = 30;
+                    optimizeMaxFpsSpinBox.value = 24;
                 }
                 ToolTip.text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Reset to default")
                 ToolTip.visible: hovered

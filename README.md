@@ -18,9 +18,11 @@ Plasma 6 Wallpaper plugin to play videos on your Desktop/Lock Screen
 </div>
 
 > [!NOTE]
-> **Wallpapernux** is a fork of [luisbocanegra/plasma-smart-video-wallpaper-reborn](https://github.com/luisbocanegra/plasma-smart-video-wallpaper-reborn) that adds automatic video optimization:
+> **Wallpapernux** is a fork of [luisbocanegra/plasma-smart-video-wallpaper-reborn](https://github.com/luisbocanegra/plasma-smart-video-wallpaper-reborn) that focused on using as few resources as possible:
 >
-> - Videos bigger than the screen are downscaled and their frame rate is limited (30 fps by default, configurable in *Playback* settings).
+> - Videos bigger than the screen are downscaled and their frame rate is limited (24 fps by default, configurable in *Playback* settings). In crop fill mode only the visible area is kept.
+> - Low resource defaults: the video only plays while no window is visible on its screen and always pauses when running on battery.
+> - For hybrid graphics laptops, decoding on the integrated GPU keeps the dedicated one idle: set *Advanced > Hardware acceleration backend* to `vaapi`.
 > - The optimized copies are generated once in the background by [`optimize_video.sh`](package/contents/ui/tools/optimize_video.sh) with FFmpeg, using VA-API hardware encoding when available (NVIDIA devices are skipped so the dGPU can stay idle) and falling back to libx264.
 > - Copies are stored in `~/.cache/luisbocanegra.smart.video.wallpaper.reborn/optimized`, the original files are never modified.
 > - The original video plays while its copy is being generated, then the player switches to the copy keeping the current position.
