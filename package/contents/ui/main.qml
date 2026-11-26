@@ -293,6 +293,7 @@ WallpaperItem {
         downscale: main.configuration.OptimizeDownscale
         targetWidth: Math.round(main.width * Screen.devicePixelRatio)
         targetHeight: Math.round(main.height * Screen.devicePixelRatio)
+        crop: main.configuration.FillMode === VideoOutput.PreserveAspectCrop
         maxFps: main.configuration.OptimizeLimitFps ? main.configuration.OptimizeMaxFps : 0
         debugEnabled: main.debugEnabled
         instanceId: Plasmoid.id ?? ""

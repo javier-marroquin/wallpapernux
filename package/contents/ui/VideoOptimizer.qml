@@ -9,13 +9,15 @@ Item {
     property bool downscale: true
     property int targetWidth: 0
     property int targetHeight: 0
+    // the video fills the screen cutting what overflows, only the visible area needs to be kept
+    property bool crop: false
     // 0 disables the limit
     property int maxFps: 30
     property bool debugEnabled: false
     property string instanceId: ""
 
     readonly property bool ready: !active || !downscale || (targetWidth > 0 && targetHeight > 0)
-    readonly property string settingsKey: active ? `${downscale ? targetWidth : 0}x${downscale ? targetHeight : 0}@${maxFps}` : "disabled"
+    readonly property string settingsKey: active ? `${downscale ? targetWidth : 0}x${downscale ? targetHeight : 0}@${maxFps}${downscale && crop ? "-crop" : ""}` : "disabled"
     readonly property string tool: Qt.resolvedUrl("./tools/optimize_video.sh").toString().substring(7)
 
     // the source of the video that is playing now became available
@@ -61,7 +63,8 @@ Item {
         const height = downscale ? targetHeight : 0;
         // the trailing comment makes each command unique, the executable engine
         // can't run the same command more than once at a time
-        const cmd = `bash ${shellQuote(tool)} ${mode} ${shellQuote(path)} ${width} ${height} ${maxFps} # ${instanceId}-${++_requestCount}`;
+        const fillMode = downscale && crop ? "crop" : "cover";
+        const cmd = `bash ${shellQuote(tool)} ${mode} ${shellQuote(path)} ${width} ${height} ${maxFps} ${fillMode} # ${instanceId}-${++_requestCount}`;
         printLog(cmd);
         runCommand.exec(cmd, callback);
     }

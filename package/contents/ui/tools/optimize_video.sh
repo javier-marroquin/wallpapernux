@@ -4,12 +4,13 @@
 # is cheaper. Original files are never modified.
 #
 # Usage:
-#   optimize_video.sh resolve   <file> <target_width> <target_height> <max_fps>
-#   optimize_video.sh transcode <file> <target_width> <target_height> <max_fps>
+#   optimize_video.sh resolve   <file> <target_width> <target_height> <max_fps> [crop]
+#   optimize_video.sh transcode <file> <target_width> <target_height> <max_fps> [crop]
 #   optimize_video.sh clear
 #
 # A target width/height of 0 disables downscaling, a max_fps of 0 disables the
-# frame rate limit.
+# frame rate limit. With "crop" (the video fills the screen and the overflow is
+# cut, e.g. landscape videos in portrait screens) only the visible area is kept.
 #
 # resolve prints a single line:
 #   CACHED <path>  an optimized copy is ready to be used
@@ -36,6 +37,7 @@ input="${2:-}"
 target_width="${3:-0}"
 target_height="${4:-0}"
 max_fps="${5:-0}"
+fill_mode="${6:-}"
 
 if [ -z "$input" ] || [ ! -f "$input" ]; then
     echo "ORIGINAL"
@@ -86,15 +88,27 @@ if awk -v f="$fps" 'BEGIN { exit !(f <= 0 || f > 1000) }'; then
     fps=$(rate_to_fps "$r_rate")
 fi
 
-# scale to cover the target size (keeping the aspect ratio) without upscaling
-read -r new_width new_height downscale < <(
-    awk -v w="$width" -v h="$height" -v tw="$target_width" -v th="$target_height" -v t="$DOWNSCALE_THRESHOLD" '
+# Scale to cover the target size keeping the aspect ratio (never upscaling).
+# When cropping, first cut the centered area that is visible on the screen.
+read -r new_width new_height downscale crop crop_width crop_height < <(
+    awk -v w="$width" -v h="$height" -v tw="$target_width" -v th="$target_height" \
+        -v t="$DOWNSCALE_THRESHOLD" -v fill="$fill_mode" '
     function even_up(x) { x = int(x + 0.999); return x + (x % 2) }
+    function even_down(x) { x = int(x); return x - (x % 2) }
     BEGIN {
-        if (tw <= 0 || th <= 0) { print w, h, 0; exit }
+        if (tw <= 0 || th <= 0) { print w, h, 0, 0, w, h; exit }
         s = tw / w; if (th / h > s) s = th / h
-        if (s < t) print even_up(w * s), even_up(h * s), 1
-        else print w, h, 0
+        cw = w; ch = h; crop = 0
+        if (fill == "crop") {
+            vw = even_down(tw / s); vh = even_down(th / s)
+            if (vw < w) cw = vw
+            if (vh < h) ch = vh
+            # ignore tiny differences in the aspect ratio
+            if (cw * ch < 0.95 * w * h) crop = 1
+            else { cw = w; ch = h }
+        }
+        if (s < t) print even_up(cw * s), even_up(ch * s), 1, crop, cw, ch
+        else print cw, ch, 0, crop, cw, ch
     }'
 )
 
@@ -103,14 +117,18 @@ if [ "$max_fps" -gt 0 ] 2>/dev/null && awk -v f="$fps" -v m="$max_fps" 'BEGIN { 
     limit_fps=1
 fi
 
-if [ "$downscale" -eq 0 ] && [ "$limit_fps" -eq 0 ]; then
+if [ "$downscale" -eq 0 ] && [ "$crop" -eq 0 ] && [ "$limit_fps" -eq 0 ]; then
     echo "ORIGINAL"
     exit 0
 fi
 
 out_fps=$([ "$limit_fps" -eq 1 ] && echo "$max_fps" || printf '%.0f' "$fps")
 file_stat=$(stat -c '%s:%Y' "$input")
-hash=$(printf '%s|%s|%s|%sx%s|%s' "$CACHE_VERSION" "$input" "$file_stat" "$new_width" "$new_height" "$out_fps" | md5sum | cut -c1-12)
+key="$CACHE_VERSION|$input|$file_stat|${new_width}x${new_height}|$out_fps"
+if [ "$crop" -eq 1 ]; then
+    key="$key|crop=${crop_width}x${crop_height}"
+fi
+hash=$(printf '%s' "$key" | md5sum | cut -c1-12)
 name=$(basename "$input")
 name="${name%.*}"
 name=$(printf '%s' "$name" | tr -c 'A-Za-z0-9._-' '_' | cut -c1-60)
@@ -156,6 +174,11 @@ if [ "$limit_fps" -eq 1 ]; then
     fps_filter="fps=$max_fps,"
 fi
 
+crop_filter=""
+if [ "$crop" -eq 1 ]; then
+    crop_filter="crop=$crop_width:$crop_height,"
+fi
+
 common_output=(
     -map 0:v:0 -map '0:a:0?'
     -c:a aac -b:a 160k
@@ -166,12 +189,9 @@ common_output=(
 # Prefer hardware encoding with VA-API, skipping NVIDIA devices so their
 # (power hungry) GPU can stay idle
 transcode_vaapi() {
-    local device driver scale
-    if [ "$downscale" -eq 1 ]; then
-        scale="scale_vaapi=w=$new_width:h=$new_height:format=nv12"
-    else
-        scale="scale_vaapi=format=nv12"
-    fi
+    local device driver
+    # the size must be explicit, otherwise the hardware crop is ignored
+    local scale="scale_vaapi=w=$new_width:h=$new_height:format=nv12"
     for device in /dev/dri/renderD*; do
         [ -e "$device" ] || continue
         driver=$(basename "$(readlink -f "/sys/class/drm/$(basename "$device")/device/driver")")
@@ -181,7 +201,7 @@ transcode_vaapi() {
             -init_hw_device "vaapi=va:$device" -filter_hw_device va \
             -hwaccel vaapi -hwaccel_device va -hwaccel_output_format vaapi \
             -i "$input" \
-            -vf "${fps_filter}format=nv12|vaapi,hwupload,$scale" \
+            -vf "${fps_filter}format=nv12|vaapi,hwupload,${crop_filter}$scale" \
             -c:v h264_vaapi -qp 23 \
             "${common_output[@]}"; then
             return 0
@@ -198,7 +218,7 @@ transcode_software() {
     echo "falling back to software encoding" >&2
     "${low_priority[@]}" ffmpeg -nostdin -hide_banner -loglevel error -y \
         -i "$input" \
-        -vf "${fps_filter}${scale}format=yuv420p" \
+        -vf "${fps_filter}${crop_filter}${scale}format=yuv420p" \
         -c:v libx264 -preset medium -crf 22 \
         "${common_output[@]}"
 }
