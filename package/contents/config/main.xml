@@ -196,5 +196,21 @@
     <entry name="LoadAheadTime" type="Int">
       <default>1000</default>
     </entry>
+    <!-- Play lighter copies of the videos, see contents/ui/tools/optimize_video.sh -->
+    <entry name="OptimizeVideos" type="Bool">
+      <label>Play optimized copies of the videos generated in the background</label>
+      <default>true</default>
+    </entry>
+    <entry name="OptimizeDownscale" type="Bool">
+      <label>Downscale videos bigger than the screen</label>
+      <default>true</default>
+    </entry>
+    <entry name="OptimizeLimitFps" type="Bool">
+      <label>Limit the frame rate of the videos to OptimizeMaxFps</label>
+      <default>true</default>
+    </entry>
+    <entry name="OptimizeMaxFps" type="Int">
+      <default>30</default>
+    </entry>
   </group>
 </kcfg>

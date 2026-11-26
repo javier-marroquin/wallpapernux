@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: luisbocanegra.smart.video.wallpaper.reborn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-06 00:52+0000\n"
+"POT-Creation-Date: 2026-11-25 22:25-0600\n"
 "PO-Revision-Date: 2026-09-20 11:51+0800\n"
 "Last-Translator: KairikiFedora <13278297951@sina.cn>\n"
 "Language-Team: KairikiFedora <13278297951@sina.cn>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.9\n"
 
-#: package/contents/ui/VideoPlayer.qml:90
+#: package/contents/ui/VideoPlayer.qml:95
 #, kde-format
 msgid "Unknown"
 msgstr "不明"
@@ -155,104 +155,104 @@ msgstr "メールを送信"
 msgid "More projects"
 msgstr "その他のプロジェクト"
 
-#: package/contents/ui/config.qml:115 package/contents/ui/config.qml:156
-#: package/contents/ui/config.qml:651 package/contents/ui/config.qml:876
-#: package/contents/ui/config.qml:1054
+#: package/contents/ui/config.qml:119 package/contents/ui/config.qml:160
+#: package/contents/ui/config.qml:655 package/contents/ui/config.qml:954
+#: package/contents/ui/config.qml:1132
 #, kde-format
 msgid "Never"
 msgstr "いいえ"
 
-#: package/contents/ui/config.qml:119 package/contents/ui/config.qml:152
+#: package/contents/ui/config.qml:123 package/contents/ui/config.qml:156
 #, kde-format
 msgid "Always"
 msgstr "いつも"
 
-#: package/contents/ui/config.qml:126 package/contents/ui/config.qml:163
-#: package/contents/ui/config.qml:864 package/contents/ui/config.qml:1042
+#: package/contents/ui/config.qml:130 package/contents/ui/config.qml:167
+#: package/contents/ui/config.qml:942 package/contents/ui/config.qml:1120
 #, kde-format
 msgid "Maximized or full-screen windows"
 msgstr "最大化されたウィンドウまたは全画面ウィンドウ"
 
-#: package/contents/ui/config.qml:130 package/contents/ui/config.qml:167
-#: package/contents/ui/config.qml:868 package/contents/ui/config.qml:1046
+#: package/contents/ui/config.qml:134 package/contents/ui/config.qml:171
+#: package/contents/ui/config.qml:946 package/contents/ui/config.qml:1124
 #, kde-format
 msgid "Active window"
 msgstr "アクティブウィンドウ"
 
-#: package/contents/ui/config.qml:134 package/contents/ui/config.qml:171
-#: package/contents/ui/config.qml:872 package/contents/ui/config.qml:1050
+#: package/contents/ui/config.qml:138 package/contents/ui/config.qml:175
+#: package/contents/ui/config.qml:950 package/contents/ui/config.qml:1128
 #, kde-format
 msgid "At least one window is visible"
 msgstr "少なくとも1つのウィンドウが表示されています"
 
-#: package/contents/ui/config.qml:148
+#: package/contents/ui/config.qml:152
 #, kde-format
 msgid "Video is paused"
 msgstr "ビデオは一時停止されています"
 
-#: package/contents/ui/config.qml:196
+#: package/contents/ui/config.qml:200
 #, kde-format
 msgid "Default"
 msgstr "デフォルト"
 
-#: package/contents/ui/config.qml:302
+#: package/contents/ui/config.qml:306
 #, kde-format
 msgid "Version:"
 msgstr "バージョン："
 
-#: package/contents/ui/config.qml:308
+#: package/contents/ui/config.qml:312
 #, kde-format
 msgid "Warning"
 msgstr "警告"
 
-#: package/contents/ui/config.qml:311
+#: package/contents/ui/config.qml:315
 #, kde-format
 msgid "Click to show"
 msgstr "クリックして表示"
 
-#: package/contents/ui/config.qml:342 package/contents/ui/config.qml:1661
+#: package/contents/ui/config.qml:346 package/contents/ui/config.qml:1739
 #, kde-format
 msgid "Videos"
 msgstr "ビデオ"
 
-#: package/contents/ui/config.qml:347
+#: package/contents/ui/config.qml:351
 #, kde-format
 msgid "Playback"
 msgstr "再生"
 
-#: package/contents/ui/config.qml:352
+#: package/contents/ui/config.qml:356
 #, kde-format
 msgid "Desktop Effects"
 msgstr "デスクトップ効果"
 
-#: package/contents/ui/config.qml:357
+#: package/contents/ui/config.qml:361
 #, kde-format
 msgid "Advanced"
 msgstr "詳細設定"
 
-#: package/contents/ui/config.qml:362
+#: package/contents/ui/config.qml:366
 #, kde-format
 msgid "Donate"
 msgstr "寄付する"
 
-#: package/contents/ui/config.qml:375
+#: package/contents/ui/config.qml:379
 #, kde-format
 msgid "Enable debug:"
 msgstr "デバッグを有効にする:"
 
-#: package/contents/ui/config.qml:376
+#: package/contents/ui/config.qml:380
 #, kde-format
 msgid "Show information overlay and print debug messages to the system log"
 msgstr "情報オーバーレイを表示し、デバッグメッセージをシステムログに出力する"
 
-#: package/contents/ui/config.qml:384
+#: package/contents/ui/config.qml:388
 #, kde-format
 msgid "Videos are loaded in RAM, bigger files will use more system resources!"
 msgstr ""
 "ビデオはRAMに読み込まれます。大きなファイルはより多くのシステムリソースを使用"
 "します！"
 
-#: package/contents/ui/config.qml:391
+#: package/contents/ui/config.qml:395
 #, kde-format
 msgid ""
 "Crashes/Black screen? Try changing the Qt Media Backend to gstreamer.<br>To "
@@ -268,12 +268,12 @@ msgstr ""
 "plasma-org.kde.plasma.desktop-appletsrc $HOME/.config/kscreenlockerrc</"
 "code></strong>"
 
-#: package/contents/ui/config.qml:396
+#: package/contents/ui/config.qml:400
 #, kde-format
 msgid "Qt Media backend instructions"
 msgstr "Qt メディアバックエンドの指示"
 
-#: package/contents/ui/config.qml:406
+#: package/contents/ui/config.qml:410
 #, kde-format
 msgid ""
 "Make sure to enable Hardware video acceleration in your system to reduce CPU/"
@@ -282,114 +282,114 @@ msgstr ""
 "動画再生時のCPU/GPU使用率を下げるために、システムでハードウェアビデオアクセラ"
 "レーションを有効にしてください。"
 
-#: package/contents/ui/config.qml:411
+#: package/contents/ui/config.qml:415
 #, kde-format
 msgid "Learn how"
 msgstr "学ぶ方法"
 
-#: package/contents/ui/config.qml:421
+#: package/contents/ui/config.qml:425
 #, kde-format
 msgid "Hardware Video Decoding "
 msgstr "ハードウェアビデオデコード"
 
-#: package/contents/ui/config.qml:426
+#: package/contents/ui/config.qml:430
 #, kde-format
 msgid "Positioning:"
 msgstr "ポジショニング："
 
-#: package/contents/ui/config.qml:432
+#: package/contents/ui/config.qml:436
 #, kde-format
 msgid "Stretch"
 msgstr "ストレッチ"
 
-#: package/contents/ui/config.qml:436
+#: package/contents/ui/config.qml:440
 #, kde-format
 msgid "Keep Proportions"
 msgstr "比率を保つ"
 
-#: package/contents/ui/config.qml:440
+#: package/contents/ui/config.qml:444
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "拡大およびトリミング"
 
-#: package/contents/ui/config.qml:454
+#: package/contents/ui/config.qml:458
 #, kde-format
 msgid "Day-night switch:"
 msgstr "昼夜切り替え："
 
-#: package/contents/ui/config.qml:462 package/contents/ui/config.qml:1726
+#: package/contents/ui/config.qml:466 package/contents/ui/config.qml:1804
 #, kde-format
 msgid "Disabled"
 msgstr "無効"
 
-#: package/contents/ui/config.qml:464
+#: package/contents/ui/config.qml:468
 #, kde-format
 msgid "All videos will be played"
 msgstr "すべてのビデオが再生されます"
 
-#: package/contents/ui/config.qml:467
+#: package/contents/ui/config.qml:471
 #, kde-format
 msgid "Plasma style"
 msgstr "Plasmaスタイル"
 
-#: package/contents/ui/config.qml:469
+#: package/contents/ui/config.qml:473
 #, kde-format
 msgid "Current Plasma style's color scheme (light/dark)"
 msgstr "現在のPlasmaスタイルの配色（ライト/ダーク）"
 
-#: package/contents/ui/config.qml:472
+#: package/contents/ui/config.qml:476
 #, kde-format
 msgid "Custom times"
 msgstr "カスタム時刻"
 
-#: package/contents/ui/config.qml:474
+#: package/contents/ui/config.qml:478
 #, kde-format
 msgid "Set custom sunrise/sunset times"
 msgstr "カスタムの日の出/日の入り時刻を設定"
 
-#: package/contents/ui/config.qml:477
+#: package/contents/ui/config.qml:481
 #, kde-format
 msgid "Day-night cycle"
 msgstr "昼夜サイクル"
 
-#: package/contents/ui/config.qml:479
+#: package/contents/ui/config.qml:483
 #, kde-format
 msgid "Use KDE's Day-Night Cycle service"
 msgstr "KDEの昼夜サイクルサービスを使用"
 
-#: package/contents/ui/config.qml:482
+#: package/contents/ui/config.qml:486
 #, kde-format
 msgid "Always day"
 msgstr "常に昼"
 
-#: package/contents/ui/config.qml:484
+#: package/contents/ui/config.qml:488
 #, kde-format
 msgid "Only play videos set to the day phase"
 msgstr "昼フェーズに設定されたビデオのみ再生"
 
-#: package/contents/ui/config.qml:487
+#: package/contents/ui/config.qml:491
 #, kde-format
 msgid "Always night"
 msgstr "常に夜"
 
-#: package/contents/ui/config.qml:489
+#: package/contents/ui/config.qml:493
 #, kde-format
 msgid "Only play videos set to the night phase"
 msgstr "夜フェーズに設定されたビデオのみ再生"
 
-#: package/contents/ui/config.qml:523
+#: package/contents/ui/config.qml:527
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "設定…"
 
-#: package/contents/ui/config.qml:530
+#: package/contents/ui/config.qml:534
 #, kde-format
 msgctxt "@action:button Configure custom day-night times"
 msgid "Configure"
 msgstr "設定"
 
-#: package/contents/ui/config.qml:542
+#: package/contents/ui/config.qml:546
 #, kde-format
 msgid ""
 "⚠ The C++ plugin is not available, this feature will not work. Switch to the "
@@ -401,43 +401,43 @@ msgstr ""
 "い。なければソースからプラグインをビルドしてください。<a href='%1'>インストー"
 "ル手順</a>を参照してください。"
 
-#: package/contents/ui/config.qml:551
+#: package/contents/ui/config.qml:555
 #, kde-format
 msgid "Sunrise:"
 msgstr "日の出："
 
-#: package/contents/ui/config.qml:556
+#: package/contents/ui/config.qml:560
 #, kde-format
 msgid "Sunset:"
 msgstr "日の入り："
 
-#: package/contents/ui/config.qml:562
+#: package/contents/ui/config.qml:566
 #, kde-format
 msgid "Transition duration:"
 msgstr "切り替え時間："
 
-#: package/contents/ui/config.qml:574 package/contents/ui/config.qml:713
+#: package/contents/ui/config.qml:578 package/contents/ui/config.qml:717
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1分"
 
-#: package/contents/ui/config.qml:588
+#: package/contents/ui/config.qml:592
 #, kde-format
 msgid "Background:"
 msgstr "背景："
 
-#: package/contents/ui/config.qml:591
+#: package/contents/ui/config.qml:595
 #, kde-format
 msgid "Blur"
 msgstr "ぼかし"
 
-#: package/contents/ui/config.qml:609
+#: package/contents/ui/config.qml:613
 #, kde-format
 msgid "radius: %1px"
 msgstr "半径: %1px"
 
-#: package/contents/ui/config.qml:618 package/contents/ui/config.qml:1001
+#: package/contents/ui/config.qml:622 package/contents/ui/config.qml:1079
 #, kde-format
 msgid ""
 "Quality of the blur is reduced if value exceeds 64. Higher values may cause "
@@ -446,32 +446,32 @@ msgstr ""
 "値が64を超えるとぼかしの品質が低下します。より高い値はぼかしが機能しなくなる"
 "原因となる可能性があります！"
 
-#: package/contents/ui/config.qml:632
+#: package/contents/ui/config.qml:636
 #, kde-format
 msgid "Solid color"
 msgstr "単色"
 
-#: package/contents/ui/config.qml:638
+#: package/contents/ui/config.qml:642
 #, kde-format
 msgid "Select Background Color"
 msgstr "背景色を選択"
 
-#: package/contents/ui/config.qml:646
+#: package/contents/ui/config.qml:650
 #, kde-format
 msgid "Change Wallpaper:"
 msgstr "壁紙を変更:"
 
-#: package/contents/ui/config.qml:655
+#: package/contents/ui/config.qml:659
 #, kde-format
 msgid "Slideshow"
 msgstr "スライドショー"
 
-#: package/contents/ui/config.qml:659
+#: package/contents/ui/config.qml:663
 #, kde-format
 msgid "On a Timer"
 msgstr "タイマーで"
 
-#: package/contents/ui/config.qml:671
+#: package/contents/ui/config.qml:675
 #, kde-format
 msgid ""
 "Automatically play the next video using the selected strategy. You can also "
@@ -482,55 +482,55 @@ msgstr ""
 "クメニューの <strong>次のビデオ</strong> を使って、壁紙を手動で変更することも"
 "できます。"
 
-#: package/contents/ui/config.qml:692
+#: package/contents/ui/config.qml:696
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1時間"
 
-#: package/contents/ui/config.qml:734
+#: package/contents/ui/config.qml:738
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1秒"
 
-#: package/contents/ui/config.qml:744
+#: package/contents/ui/config.qml:748
 #, kde-format
 msgid "Random order:"
 msgstr "ランダム順:"
 
-#: package/contents/ui/config.qml:750
+#: package/contents/ui/config.qml:754
 #, kde-format
 msgid "Resume last video on startup:"
 msgstr "起動時に前回のビデオを再開:"
 
-#: package/contents/ui/config.qml:755 package/contents/ui/config.qml:1070
+#: package/contents/ui/config.qml:759 package/contents/ui/config.qml:1148
 #, kde-format
 msgid "Speed:"
 msgstr "スピード："
 
-#: package/contents/ui/config.qml:776 package/contents/ui/config.qml:940
-#: package/contents/ui/config.qml:1090
+#: package/contents/ui/config.qml:780 package/contents/ui/config.qml:910
+#: package/contents/ui/config.qml:1018 package/contents/ui/config.qml:1168
 #, kde-format
 msgid "Reset to default"
 msgstr "デフォルトに戻す"
 
-#: package/contents/ui/config.qml:782
+#: package/contents/ui/config.qml:786
 #, kde-format
 msgid "Crossfade (Beta):"
 msgstr "クロスフェード（ベータ）:"
 
-#: package/contents/ui/config.qml:788
+#: package/contents/ui/config.qml:792
 #, kde-format
 msgid "Duration:"
 msgstr "期間："
 
-#: package/contents/ui/config.qml:806 package/contents/ui/config.qml:841
+#: package/contents/ui/config.qml:810 package/contents/ui/config.qml:845
 #, kde-format
 msgid "%1ms"
 msgstr "%1ミリ秒"
 
-#: package/contents/ui/config.qml:814
+#: package/contents/ui/config.qml:818
 #, kde-format
 msgid ""
 "Adds a smooth transition between videos. <strong>Uses additional Memory and "
@@ -539,12 +539,12 @@ msgstr ""
 "動画の間にスムーズな切り替えを追加します。<strong>有効にすると追加のメモリを"
 "使用し、再生に問題が出ることがあります。</strong>"
 
-#: package/contents/ui/config.qml:825
+#: package/contents/ui/config.qml:829
 #, kde-format
 msgid "Load ahead time:"
 msgstr "先読み時間："
 
-#: package/contents/ui/config.qml:848
+#: package/contents/ui/config.qml:852
 #, kde-format
 msgid ""
 "Loads the next video before the current one finishes to prevent blank frames "
@@ -553,42 +553,88 @@ msgstr ""
 "現在のビデオが終了する前に次のビデオを読み込み、ビデオ間の空白フレームを防ぎ"
 "ます。それでも空白フレームが表示される場合は、この値を大きくしてください。"
 
-#: package/contents/ui/config.qml:854
+#: package/contents/ui/config.qml:857
+#, kde-format
+msgid "Optimize videos:"
+msgstr ""
+
+#: package/contents/ui/config.qml:861
+#, kde-format
+msgid "Play lighter copies of the videos"
+msgstr ""
+
+#: package/contents/ui/config.qml:864
+#, kde-format
+msgid ""
+"Copies of the videos are generated in the background with FFmpeg (using VA-"
+"API hardware encoding when available) and played instead of the originals. "
+"This greatly reduces the CPU/GPU usage of high resolution or high frame rate "
+"videos. The original files are never modified."
+msgstr ""
+
+#: package/contents/ui/config.qml:870
+#, kde-format
+msgid "Downscale videos bigger than the screen"
+msgstr ""
+
+#: package/contents/ui/config.qml:880
+#, kde-format
+msgid "Limit frame rate to:"
+msgstr ""
+
+#: package/contents/ui/config.qml:898
+#, kde-format
+msgid "%1 fps"
+msgstr ""
+
+#: package/contents/ui/config.qml:917
+#, kde-format
+msgid "Delete optimized copies"
+msgstr ""
+
+#: package/contents/ui/config.qml:923
+#, kde-format
+msgid ""
+"Frees the disk space used by the copies stored in %1, they will be generated "
+"again when needed."
+msgstr ""
+
+#: package/contents/ui/config.qml:932
 #, kde-format
 msgid "Filter windows:"
 msgstr "フィルターウィンドウ："
 
-#: package/contents/ui/config.qml:855
+#: package/contents/ui/config.qml:933
 #, kde-format
 msgid "This screen only"
 msgstr "この画面だけ"
 
-#: package/contents/ui/config.qml:861
+#: package/contents/ui/config.qml:939
 #, kde-format
 msgid "Pause:"
 msgstr "一時停止："
 
-#: package/contents/ui/config.qml:891
+#: package/contents/ui/config.qml:969
 #, kde-format
 msgid "Mute:"
 msgstr "ミュート:"
 
-#: package/contents/ui/config.qml:905
+#: package/contents/ui/config.qml:983
 #, kde-format
 msgid "Audio device:"
 msgstr "オーディオデバイス："
 
-#: package/contents/ui/config.qml:924
+#: package/contents/ui/config.qml:1002
 #, kde-format
 msgid "Volume:"
 msgstr "音量:"
 
-#: package/contents/ui/config.qml:948
+#: package/contents/ui/config.qml:1026
 #, kde-format
 msgid "Audio fade in/out (seconds):"
 msgstr "オーディオのフェードイン/アウト（秒）："
 
-#: package/contents/ui/config.qml:956
+#: package/contents/ui/config.qml:1034
 #, kde-format
 msgid ""
 "Gradually increase and decrease the volume at the beginning and end of "
@@ -600,69 +646,69 @@ msgstr ""
 "最終的な音量はクロスフェードによる音量とオーディオのフェードイン/アウトによる"
 "音量の積になります。"
 
-#: package/contents/ui/config.qml:962
+#: package/contents/ui/config.qml:1040
 #, kde-format
 msgid "Blur:"
 msgstr "ぼかし:"
 
-#: package/contents/ui/config.qml:976
+#: package/contents/ui/config.qml:1054
 #, kde-format
 msgid "Radius:"
 msgstr "半径:"
 
-#: package/contents/ui/config.qml:992
+#: package/contents/ui/config.qml:1070
 #, kde-format
 msgid "%1px"
 msgstr "%1px"
 
-#: package/contents/ui/config.qml:1011
+#: package/contents/ui/config.qml:1089
 #, kde-format
 msgid "Animation duration:"
 msgstr "アニメーションの期間："
 
-#: package/contents/ui/config.qml:1029
+#: package/contents/ui/config.qml:1107
 #, kde-format
 msgctxt "animation duration"
 msgid "%1ms"
 msgstr "%1ms"
 
-#: package/contents/ui/config.qml:1039
+#: package/contents/ui/config.qml:1117
 #, kde-format
 msgid "Alternative speed:"
 msgstr "第2速度："
 
-#: package/contents/ui/config.qml:1096
+#: package/contents/ui/config.qml:1174
 #, kde-format
 msgid "On battery below:"
 msgstr "バッテリー残量の閾値："
 
-#: package/contents/ui/config.qml:1112
+#: package/contents/ui/config.qml:1190
 #, kde-format
 msgctxt "battery level e.g 10%"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/config.qml:1120
+#: package/contents/ui/config.qml:1198
 #, kde-format
 msgid "Pause video"
 msgstr "ビデオを一時停止"
 
-#: package/contents/ui/config.qml:1125
+#: package/contents/ui/config.qml:1203
 #, kde-format
 msgid "Disable blur"
 msgstr "ぼかしを無効にする"
 
-#: package/contents/ui/config.qml:1131
+#: package/contents/ui/config.qml:1209
 #, kde-format
 msgid "Pause on screen off:"
 msgstr "画面オフ時に一時停止:"
 
-#: package/contents/ui/config.qml:1136
+#: package/contents/ui/config.qml:1214
 #, kde-format
 msgid "Screen state command:"
 msgstr "画面状態コマンド："
 
-#: package/contents/ui/config.qml:1146
+#: package/contents/ui/config.qml:1224
 #, kde-format
 msgid ""
 "The command/script must return '0' (zero) or 'off' when the screen is off"
@@ -670,7 +716,7 @@ msgstr ""
 "画面がオフのとき、コマンド/スクリプトは「0」または「off」を返さなければなりま"
 "せん"
 
-#: package/contents/ui/config.qml:1160
+#: package/contents/ui/config.qml:1238
 #, kde-format
 msgid ""
 "Control how the Desktop Effects (e.g Overview or Peek at Desktop) affect the "
@@ -679,32 +725,32 @@ msgstr ""
 "デスクトップエフェクト（例: 概要表示やデスクトップのプレビュー）がアクティブ"
 "になったときに壁紙にどのように影響するかを制御します。カンマで区切った名前。"
 
-#: package/contents/ui/config.qml:1170
+#: package/contents/ui/config.qml:1248
 #, kde-format
 msgid "Play in:"
 msgstr "有効時に再生："
 
-#: package/contents/ui/config.qml:1178
+#: package/contents/ui/config.qml:1256
 #, kde-format
 msgid "Pause in:"
 msgstr "有効時に一時停止："
 
-#: package/contents/ui/config.qml:1186
+#: package/contents/ui/config.qml:1264
 #, kde-format
 msgid "Show blur in:"
 msgstr "有効時にぼかしを有効にする："
 
-#: package/contents/ui/config.qml:1194
+#: package/contents/ui/config.qml:1272
 #, kde-format
 msgid "Hide blur in:"
 msgstr "有効時にぼかしを無効にする："
 
-#: package/contents/ui/config.qml:1202
+#: package/contents/ui/config.qml:1280
 #, kde-format
 msgid "Alternative speed in:"
 msgstr "有効時に第2速度を有効にする："
 
-#: package/contents/ui/config.qml:1208
+#: package/contents/ui/config.qml:1286
 #, kde-format
 msgid ""
 "Currently enabled and <u><strong><font color='%1'>active</font></strong></u> "
@@ -713,12 +759,12 @@ msgstr ""
 "現在有効で<u><strong><font color='%1'>アクティブ</font></strong></u>なデスク"
 "トップ効果:"
 
-#: package/contents/ui/config.qml:1218
+#: package/contents/ui/config.qml:1296
 #, kde-format
 msgid "Select to copy"
 msgstr "コピーするために選択"
 
-#: package/contents/ui/config.qml:1248
+#: package/contents/ui/config.qml:1326
 #, kde-format
 msgid ""
 "See <a href=\"%1\">Improve performance by enabling Hardware Video "
@@ -727,7 +773,7 @@ msgstr ""
 "有効化方法と動作確認方法については、<a href=\"%1\">ハードウェアビデオアクセラ"
 "レーションを有効にしてパフォーマンスを向上</a>を参照してください。"
 
-#: package/contents/ui/config.qml:1255
+#: package/contents/ui/config.qml:1333
 #, kde-format
 msgid ""
 "Everything in this page will also affect other programs running inside "
@@ -736,12 +782,12 @@ msgstr ""
 "このページのすべての設定はPlasma内で実行中の他のプログラムにも影響します。変"
 "更後もビデオ再生が正常に動作することを確認してください。"
 
-#: package/contents/ui/config.qml:1264
+#: package/contents/ui/config.qml:1342
 #, kde-format
 msgid "A logout is needed to apply these changes!"
 msgstr "これらの変更を適用するにはログアウトが必要です！"
 
-#: package/contents/ui/config.qml:1272
+#: package/contents/ui/config.qml:1350
 #, kde-format
 msgid ""
 "In case of issues, you can delete <strong>%1</strong> and logout or reboot "
@@ -750,7 +796,7 @@ msgstr ""
 "問題が発生した場合は、<strong>%1</strong>を削除してからログアウトまたは再起動"
 "すると、すべての変更を元に戻せます。"
 
-#: package/contents/ui/config.qml:1281
+#: package/contents/ui/config.qml:1359
 #, kde-format
 msgid ""
 "These settings only apply to the Desktop and Lock screen, for them to also "
@@ -765,17 +811,17 @@ msgstr ""
 "profile.d/</strong>にコピーするか、その内容を<strong>/etc/environment</"
 "strong>にコピーしてください。"
 
-#: package/contents/ui/config.qml:1289 package/contents/ui/config.qml:1924
+#: package/contents/ui/config.qml:1367 package/contents/ui/config.qml:2002
 #, kde-format
 msgid "Open containing folder"
 msgstr "所在のフォルダーを開く"
 
-#: package/contents/ui/config.qml:1300
+#: package/contents/ui/config.qml:1378
 #, kde-format
 msgid "Pick one based on the GPUs in your system"
 msgstr "システムのGPUに応じて選択してください"
 
-#: package/contents/ui/config.qml:1306
+#: package/contents/ui/config.qml:1384
 #, kde-format
 msgid ""
 "Intel only or paired with another vendor GPU:<br>- FFmpeg + VA-API "
@@ -788,7 +834,7 @@ msgstr ""
 "エンド<br>- Intelがプライマリレンダラーであるか、他のGPUが対応していない場合"
 "はFFmpeg + Vulkanアクセラレーションバックエンド"
 
-#: package/contents/ui/config.qml:1312
+#: package/contents/ui/config.qml:1390
 #, kde-format
 msgid ""
 "AMD only or paired with another vendor GPU:<br>- FFmpeg + VA-API "
@@ -800,7 +846,7 @@ msgstr ""
 "ド + radeonsi VA-APIドライバー<br>- AMDがプライマリレンダラーであるか、他の"
 "GPUが対応していない場合はFFmpeg + Vulkanアクセラレーションバックエンド"
 
-#: package/contents/ui/config.qml:1318
+#: package/contents/ui/config.qml:1396
 #, kde-format
 msgid ""
 "NVIDIA only or paired with another vendor GPU:<br>- FFmpeg + cuda "
@@ -811,21 +857,21 @@ msgstr ""
 "ンド<br>- NVIDIAがプライマリレンダラーであるか、他のGPUが対応していない場合は"
 "FFmpeg + Vulkanアクセラレーションバックエンド"
 
-#: package/contents/ui/config.qml:1340
+#: package/contents/ui/config.qml:1418
 #, kde-format
 msgid "Media backend:"
 msgstr "メディアバックエンド："
 
-#: package/contents/ui/config.qml:1343 package/contents/ui/config.qml:1371
-#: package/contents/ui/config.qml:1388 package/contents/ui/config.qml:1449
-#: package/contents/ui/config.qml:1460 package/contents/ui/config.qml:1478
-#: package/contents/ui/config.qml:1489 package/contents/ui/config.qml:1507
-#: package/contents/ui/config.qml:1543
+#: package/contents/ui/config.qml:1421 package/contents/ui/config.qml:1449
+#: package/contents/ui/config.qml:1466 package/contents/ui/config.qml:1527
+#: package/contents/ui/config.qml:1538 package/contents/ui/config.qml:1556
+#: package/contents/ui/config.qml:1567 package/contents/ui/config.qml:1585
+#: package/contents/ui/config.qml:1621
 #, kde-format
 msgid "System default"
 msgstr "システムのデフォルト"
 
-#: package/contents/ui/config.qml:1349
+#: package/contents/ui/config.qml:1427
 #, kde-format
 msgid ""
 "By default Qt will use the FFmpeg backend, if it causes playback issues in "
@@ -840,72 +886,72 @@ msgstr ""
 "パッケージは<strong>qt6-multimedia-ffmpeg</strong>と<strong>qt6-multimedia-"
 "gstreamer</strong>です。"
 
-#: package/contents/ui/config.qml:1371 package/contents/ui/config.qml:1449
+#: package/contents/ui/config.qml:1449 package/contents/ui/config.qml:1527
 #, kde-format
 msgid "Current value:"
 msgstr "現在の値："
 
-#: package/contents/ui/config.qml:1379
+#: package/contents/ui/config.qml:1457
 #, kde-format
 msgid "Hardware acceleration backend:"
 msgstr "ハードウェアアクセラレーションバックエンド："
 
-#: package/contents/ui/config.qml:1389
+#: package/contents/ui/config.qml:1467
 #, kde-format
 msgid "Let the system decide"
 msgstr "システムに決定させる"
 
-#: package/contents/ui/config.qml:1393
+#: package/contents/ui/config.qml:1471
 #, kde-format
 msgid "CUDA"
 msgstr "CUDA"
 
-#: package/contents/ui/config.qml:1394
+#: package/contents/ui/config.qml:1472
 #, kde-format
 msgid "NVIDIA and older AMD only"
 msgstr "NVIDIAおよび旧年式AMDのみ"
 
-#: package/contents/ui/config.qml:1398
+#: package/contents/ui/config.qml:1476
 #, kde-format
 msgid "Quick Sink Video"
 msgstr "Quick Sink Video"
 
-#: package/contents/ui/config.qml:1399
+#: package/contents/ui/config.qml:1477
 #, kde-format
 msgid "Intel only"
 msgstr "Intelのみ"
 
-#: package/contents/ui/config.qml:1403
+#: package/contents/ui/config.qml:1481
 #, kde-format
 msgid "Video Acceleration API (VA-API)"
 msgstr "ビデオアクセラレーションAPI（VA-API）"
 
-#: package/contents/ui/config.qml:1404
+#: package/contents/ui/config.qml:1482
 #, kde-format
 msgid "Intel, AMD and NVIDIA with nvidia-vaapi-driver"
 msgstr "Intel、AMD、およびnvidia-vaapi-driver使用のNVIDIA"
 
-#: package/contents/ui/config.qml:1408
+#: package/contents/ui/config.qml:1486
 #, kde-format
 msgid "VDPAU"
 msgstr "VDPAU"
 
-#: package/contents/ui/config.qml:1409
+#: package/contents/ui/config.qml:1487
 #, kde-format
 msgid "Legacy, NVIDIA only"
 msgstr "レガシー、NVIDIAのみ"
 
-#: package/contents/ui/config.qml:1413
+#: package/contents/ui/config.qml:1491
 #, kde-format
 msgid "Vulkan"
 msgstr "Vulkan"
 
-#: package/contents/ui/config.qml:1414
+#: package/contents/ui/config.qml:1492
 #, kde-format
 msgid "NVIDIA, Intel and AMD, needs GPU and driver support"
 msgstr "NVIDIA、Intel、AMD。GPUとドライバーのサポートが必要"
 
-#: package/contents/ui/config.qml:1443
+#: package/contents/ui/config.qml:1521
 #, kde-format
 msgid ""
 "You can use this to force a specific gpu, for example by setting "
@@ -920,12 +966,12 @@ msgstr ""
 "ポートが必要な場合は、GitHubでIssueを作成するか、Discordサーバーでご連絡くだ"
 "さい。"
 
-#: package/contents/ui/config.qml:1457
+#: package/contents/ui/config.qml:1535
 #, kde-format
 msgid "VA-API driver:"
 msgstr "VA-APIドライバー："
 
-#: package/contents/ui/config.qml:1472
+#: package/contents/ui/config.qml:1550
 #, kde-format
 msgid ""
 "Select the VA-API driver to use. See the link at the top of this section for "
@@ -934,30 +980,30 @@ msgstr ""
 "使用するVA-APIドライバーを選択してください。必要なシステムパッケージについて"
 "は、このセクション上部のリンクを参照してください。"
 
-#: package/contents/ui/config.qml:1478 package/contents/ui/config.qml:1507
-#: package/contents/ui/config.qml:1543
+#: package/contents/ui/config.qml:1556 package/contents/ui/config.qml:1585
+#: package/contents/ui/config.qml:1621
 #, kde-format
 msgid "Current value: "
 msgstr "現在の値： "
 
-#: package/contents/ui/config.qml:1486
+#: package/contents/ui/config.qml:1564
 #, kde-format
 msgid "VDPAU driver:"
 msgstr "VDPAUドライバー："
 
-#: package/contents/ui/config.qml:1501
+#: package/contents/ui/config.qml:1579
 #, kde-format
 msgid "NVIDIA (and older AMD) not recommended or supported on modern hardware"
 msgstr ""
 "NVIDIA（および旧年式AMD）はモダンなハードウェアでは推奨されず、サポートされて"
 "いません"
 
-#: package/contents/ui/config.qml:1515
+#: package/contents/ui/config.qml:1593
 #, kde-format
 msgid "Disable hardware textures conversion:"
 msgstr "ハードウェアテクスチャ変換を無効にする："
 
-#: package/contents/ui/config.qml:1532
+#: package/contents/ui/config.qml:1610
 #, kde-format
 msgid ""
 "GPU-based conversion for decoded and rendered video frames can significantly "
@@ -972,7 +1018,7 @@ msgstr ""
 "まにすることをお勧めします：<br><code>eglCreateImage failed for plane 0 with "
 "error code 12300</code><br><code>vaExportSurfaceHandle failed</code>"
 
-#: package/contents/ui/config.qml:1643
+#: package/contents/ui/config.qml:1721
 #, kde-format
 msgid ""
 "No items found \n"
@@ -981,82 +1027,82 @@ msgstr ""
 "アイテムが見つかりません\n"
 "いくつかのファイルを追加または削除してください"
 
-#: package/contents/ui/config.qml:1664
+#: package/contents/ui/config.qml:1742
 #, kde-format
 msgid "Actions…"
 msgstr "バッチ操作…"
 
-#: package/contents/ui/config.qml:1670
+#: package/contents/ui/config.qml:1748
 #, kde-format
 msgid "Disable all"
 msgstr "すべて無効にする"
 
-#: package/contents/ui/config.qml:1675
+#: package/contents/ui/config.qml:1753
 #, kde-format
 msgid "Enable all"
 msgstr "すべて有効にする"
 
-#: package/contents/ui/config.qml:1680
+#: package/contents/ui/config.qml:1758
 #, kde-format
 msgid "Swap enabled state"
 msgstr "スワップ有効状態"
 
-#: package/contents/ui/config.qml:1685
+#: package/contents/ui/config.qml:1763
 #, kde-format
 msgid "Remove all"
 msgstr "すべて削除"
 
-#: package/contents/ui/config.qml:1688
+#: package/contents/ui/config.qml:1766
 #, kde-format
 msgid "Remove all media?"
 msgstr "すべてのメディアを削除しますか？"
 
-#: package/contents/ui/config.qml:1698
+#: package/contents/ui/config.qml:1776
 #, kde-format
 msgid "Pick a file…"
 msgstr "ファイルを選択…"
 
-#: package/contents/ui/config.qml:1703
+#: package/contents/ui/config.qml:1781
 #, kde-format
 msgid "Enter path or url"
 msgstr "パスまたはURLを入力"
 
-#: package/contents/ui/config.qml:1722
+#: package/contents/ui/config.qml:1800
 #, kde-format
 msgid "Night"
 msgstr "夜"
 
-#: package/contents/ui/config.qml:1723
+#: package/contents/ui/config.qml:1801
 #, kde-format
 msgid "Sunrise"
 msgstr "日の出"
 
-#: package/contents/ui/config.qml:1724
+#: package/contents/ui/config.qml:1802
 #, kde-format
 msgid "Day"
 msgstr "昼"
 
-#: package/contents/ui/config.qml:1725
+#: package/contents/ui/config.qml:1803
 #, kde-format
 msgid "Sunset"
 msgstr "日の入り"
 
-#: package/contents/ui/config.qml:1766
+#: package/contents/ui/config.qml:1844
 #, kde-format
 msgid "Preview"
 msgstr "プレビュー"
 
-#: package/contents/ui/config.qml:1779
+#: package/contents/ui/config.qml:1857
 #, kde-format
 msgid "Whether or not this video will be played"
 msgstr "このビデオが再生されるかどうか"
 
-#: package/contents/ui/config.qml:1799
+#: package/contents/ui/config.qml:1877
 #, kde-format
 msgid "Local file or static url"
 msgstr "ローカルファイルまたは静的URL"
 
-#: package/contents/ui/config.qml:1830
+#: package/contents/ui/config.qml:1908
 #, kde-format
 msgid ""
 "Playback speed for this video. Minimum accepted is 0.01, set to 0.0 to "
@@ -1065,7 +1111,7 @@ msgstr ""
 "このビデオの再生速度。最小許容値は0.01で、この設定を無視するには0.0に設定して"
 "ください。"
 
-#: package/contents/ui/config.qml:1847
+#: package/contents/ui/config.qml:1925
 #, kde-format
 msgid ""
 "Alternative playback speed for this video. Minimum accepted is 0.01, set to "
@@ -1074,7 +1120,7 @@ msgstr ""
 "このビデオの代替再生速度。最低値は0.01で、この設定を無視するには0.0に設定して"
 "ください。"
 
-#: package/contents/ui/config.qml:1873
+#: package/contents/ui/config.qml:1951
 #, kde-format
 msgid ""
 "Phase of the day at which this video will play. If set to <strong>Disabled</"
@@ -1084,7 +1130,7 @@ msgstr ""
 "このビデオが再生される時間帯。<strong>無効</strong>に設定すると、現在の時間帯"
 "に関係なく再生されます。<br>現在：<strong>%1</strong>"
 
-#: package/contents/ui/config.qml:1888
+#: package/contents/ui/config.qml:1966
 #, kde-format
 msgid ""
 "If enabled the video will repeat instead of playing the next one.<br>Use "
@@ -1095,87 +1141,87 @@ msgstr ""
 "次の動画を再生するには、デスクトップの右クリックメニューから<strong>次の動画"
 "</strong>を使用してください。"
 
-#: package/contents/ui/config.qml:1902
+#: package/contents/ui/config.qml:1980
 #, kde-format
 msgid "Pick a file"
 msgstr "ファイルを選択"
 
-#: package/contents/ui/config.qml:1912
+#: package/contents/ui/config.qml:1990
 #, kde-format
 msgid "More actions"
 msgstr "その他の操作"
 
-#: package/contents/ui/config.qml:1917
+#: package/contents/ui/config.qml:1995
 #, kde-format
 msgid "Open in default application…"
 msgstr "デフォルトのアプリケーションで開く…"
 
-#: package/contents/ui/config.qml:1932
+#: package/contents/ui/config.qml:2010
 #, kde-format
 msgid "Play this file only (disable all others)"
 msgstr "このファイルだけ再生する（他のすべてを無効にする）"
 
-#: package/contents/ui/config.qml:1942
+#: package/contents/ui/config.qml:2020
 #, kde-format
 msgid "Remove media?"
 msgstr "メディアを削除しますか？"
 
-#: package/contents/ui/config.qml:1953
+#: package/contents/ui/config.qml:2031
 #, kde-format
 msgid "Remove from list"
 msgstr "リストから削除"
 
-#: package/contents/ui/config.qml:2014
+#: package/contents/ui/config.qml:2092
 #, kde-format
 msgid "Pick a video file"
 msgstr "ビデオファイルを選択してください"
 
-#: package/contents/ui/config.qml:2015
+#: package/contents/ui/config.qml:2093
 #, kde-format
 msgid "All files"
 msgstr "すべてのファイル"
 
-#: package/contents/ui/config.qml:2015
+#: package/contents/ui/config.qml:2093
 #, kde-format
 msgid "Video files"
 msgstr "ビデオファイル"
 
-#: package/contents/ui/main.qml:385
+#: package/contents/ui/main.qml:418
 #, kde-format
 msgid "No video source \n"
 msgstr "ビデオソースがありません \n"
 
-#: package/contents/ui/main.qml:610
+#: package/contents/ui/main.qml:645
 #, kde-format
 msgid "Next Video"
 msgstr "次のビデオ"
 
-#: package/contents/ui/main.qml:620
+#: package/contents/ui/main.qml:655
 #, kde-format
 msgid "Pause"
 msgstr "一時停止"
 
-#: package/contents/ui/main.qml:620
+#: package/contents/ui/main.qml:655
 #, kde-format
 msgid "Play"
 msgstr "再生"
 
-#: package/contents/ui/main.qml:622
+#: package/contents/ui/main.qml:657
 #, kde-format
 msgid "Default Playback"
 msgstr "デフォルト再生"
 
-#: package/contents/ui/main.qml:644
+#: package/contents/ui/main.qml:679
 #, kde-format
 msgid "Mute"
 msgstr "ミュート"
 
-#: package/contents/ui/main.qml:644
+#: package/contents/ui/main.qml:679
 #, kde-format
 msgid "Unmute"
 msgstr "ミュート解除"
 
-#: package/contents/ui/main.qml:646
+#: package/contents/ui/main.qml:681
 #, kde-format
 msgid "Default Muting"
 msgstr "デフォルトでミュート"

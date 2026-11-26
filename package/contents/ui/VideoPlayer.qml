@@ -46,6 +46,11 @@ Item {
     property int loadAheadTime: 0
     property bool disableAudioOutput: false
 
+    property var optimizer: null
+    // what actually gets played, may be an optimized copy of playerSource.filename
+    property string resolvedFilename: ""
+    property string resolvedSettingsKey: ""
+
     readonly property real fadeInOutRatio: {
         if (audioFadeInOutDuration === 0) {
             return 1;
@@ -158,7 +163,7 @@ Item {
         id: player
         videoOutput: videoOutput
         audioOutput: root.disableAudioOutput ? null : audioOutput
-        source: root.playerSource?.filename ?? ""
+        source: root.resolvedFilename
         playbackRate: root.playbackRate
         autoPlay: true
 
@@ -280,5 +285,20 @@ Item {
             }
             root.updatePlaybackState();
         }
+    }
+
+    Component.onCompleted: {
+        const filename = root.playerSource?.filename ?? "";
+        if (!root.optimizer || !filename) {
+            root.resolvedFilename = filename;
+            return;
+        }
+        root.optimizer.resolve(filename, (resolved, settingsKey) => {
+            // the player may have been replaced while resolving
+            try {
+                root.resolvedSettingsKey = settingsKey;
+                root.resolvedFilename = resolved;
+            } catch (e) {}
+        });
     }
 }

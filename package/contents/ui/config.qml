@@ -70,6 +70,10 @@ ColumnLayout {
     property alias cfg_CrossfadeEnabled: crossfadeEnabledCheckbox.checked
     property alias cfg_CrossfadeDuration: crossfadeDurationSpinBox.value
     property alias cfg_LoadAheadTime: loadAheadTimeSpinBox.value
+    property alias cfg_OptimizeVideos: optimizeVideosCheckbox.checked
+    property alias cfg_OptimizeDownscale: optimizeDownscaleCheckbox.checked
+    property alias cfg_OptimizeLimitFps: optimizeLimitFpsCheckbox.checked
+    property alias cfg_OptimizeMaxFps: optimizeMaxFpsSpinBox.value
     property real cfg_PlaybackRate
     property real cfg_AlternativePlaybackRate
     property alias cfg_Volume: volumeSlider.value
@@ -846,6 +850,80 @@ ColumnLayout {
             }
             Kirigami.ContextualHelpButton {
                 toolTipText: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Loads the next video before the current one finishes to prevent blank frames between videos. Increase this value if you still see them.")
+            }
+        }
+
+        RowLayout {
+            Kirigami.FormData.label: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Optimize videos:")
+            visible: root.currentTab === 1
+            CheckBox {
+                id: optimizeVideosCheckbox
+                text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Play lighter copies of the videos")
+            }
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Copies of the videos are generated in the background with FFmpeg (using VA-API hardware encoding when available) and played instead of the originals. This greatly reduces the CPU/GPU usage of high resolution or high frame rate videos. The original files are never modified.")
+            }
+        }
+
+        CheckBox {
+            id: optimizeDownscaleCheckbox
+            text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Downscale videos bigger than the screen")
+            enabled: optimizeVideosCheckbox.checked
+            visible: root.currentTab === 1
+        }
+
+        RowLayout {
+            visible: root.currentTab === 1
+            enabled: optimizeVideosCheckbox.checked
+            CheckBox {
+                id: optimizeLimitFpsCheckbox
+                text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Limit frame rate to:")
+            }
+            SpinBox {
+                id: optimizeMaxFpsSpinBox
+                enabled: optimizeLimitFpsCheckbox.checked
+                from: 5
+                to: 240
+                stepSize: 1
+                font.features: {
+                    "tnum": 1
+                }
+                readonly property regexp reExtractNum: /\D*?(\d+)\D*$/
+
+                validator: RegularExpressionValidator {
+                    regularExpression: optimizeMaxFpsSpinBox.reExtractNum
+                }
+
+                textFromValue: function (value, locale) {
+                    return i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "%1 fps", value);
+                }
+                valueFromText: function (text, locale) {
+                    return Number.fromLocaleString(locale, reExtractNum.exec(text)[1]);
+                }
+            }
+            Button {
+                icon.name: "edit-undo-symbolic"
+                flat: true
+                onClicked: {
+                    optimizeMaxFpsSpinBox.value = 30;
+                }
+                ToolTip.text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Reset to default")
+                ToolTip.visible: hovered
+            }
+        }
+
+        Button {
+            visible: root.currentTab === 1
+            text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Delete optimized copies")
+            icon.name: "edit-clear-history"
+            onClicked: {
+                optimizerCommand.exec(`bash '${Qt.resolvedUrl("./tools/optimize_video.sh").toString().substring(7)}' clear`);
+            }
+            hoverEnabled: true
+            ToolTip.text: i18nd("plasma_wallpaper_luisbocanegra.smart.video.wallpaper.reborn", "Frees the disk space used by the copies stored in %1, they will be generated again when needed.", "~/.cache/luisbocanegra.smart.video.wallpaper.reborn/optimized")
+            ToolTip.visible: hovered
+            RunCommand {
+                id: optimizerCommand
             }
         }
 

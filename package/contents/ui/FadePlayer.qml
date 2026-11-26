@@ -31,6 +31,7 @@ StackView {
     property bool shouldPlay: true
     property int loops: MediaPlayer.Infinite
     property bool disableAudioOutput: false
+    property var optimizer: null
 
     property list<var> propertiesMonitor: [currentSource, globalVolume, muted, fillMode, targetCrossfadeDuration, changeWallpaperMode, fillBlurRadius, fillBlur, audioOutputDevice, crossfadeEnabled, debugEnabled, useAlternativePlaybackRate, alternativePlaybackRateGlobal, globalPlaybackRate, audioFadeInOutDuration, loadAheadTime, disableAudioOutput]
 
@@ -84,7 +85,12 @@ StackView {
         loadVideo(true);
     }
 
-    function loadVideo(skipAnimation) {
+    // reload the current video at the same position, e.g. to switch to its optimized copy
+    function reloadVideo() {
+        loadVideo(false, root.currentItem?.position ?? 0);
+    }
+
+    function loadVideo(skipAnimation, startPosition) {
         if (pendingVideo) {
             pendingVideo.mediaStatusChanged.disconnect(replaceWhenLoaded);
             pendingVideo.destroy();
@@ -116,11 +122,12 @@ StackView {
             "videoAlternativePlaybackRate": root.currentSource?.alternativePlaybackRate ?? 0,
             "changeWallpaperMode": root.changeWallpaperMode,
             "shouldPlay": Qt.binding(() => root.shouldPlay),
-            "lastVideoPosition": root.resumeLastVideo && root._restoreLastPosition ? root.lastVideoPosition : 0,
+            "lastVideoPosition": startPosition ?? (root.resumeLastVideo && root._restoreLastPosition ? root.lastVideoPosition : 0),
             "debugEnabled": root.debugEnabled,
             "audioFadeInOutDuration": root.audioFadeInOutDuration,
             "loadAheadTime": root.loadAheadTime,
-            "disableAudioOutput": root.disableAudioOutput
+            "disableAudioOutput": root.disableAudioOutput,
+            "optimizer": root.optimizer
         };
         pendingVideo = baseVideo.createObject(root, properties);
 

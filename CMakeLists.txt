@@ -34,6 +34,7 @@ if(INSTALL_WALLPAPER)
 
     install(PROGRAMS
         "${CMAKE_CURRENT_SOURCE_DIR}/package/contents/ui/tools/gdbus_get_signal.sh"
+        "${CMAKE_CURRENT_SOURCE_DIR}/package/contents/ui/tools/optimize_video.sh"
         DESTINATION "${PLASMA_DATA_INSTALL_DIR}/wallpapers/${PLUGIN_ID}/contents/ui/tools"
     )
 

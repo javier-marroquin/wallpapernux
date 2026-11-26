@@ -287,6 +287,38 @@ WallpaperItem {
         }
     }
 
+    VideoOptimizer {
+        id: videoOptimizer
+        active: main.configuration.OptimizeVideos
+        downscale: main.configuration.OptimizeDownscale
+        targetWidth: Math.round(main.width * Screen.devicePixelRatio)
+        targetHeight: Math.round(main.height * Screen.devicePixelRatio)
+        maxFps: main.configuration.OptimizeLimitFps ? main.configuration.OptimizeMaxFps : 0
+        debugEnabled: main.debugEnabled
+        instanceId: Plasmoid.id ?? ""
+        onOptimized: (original, optimizedUrl) => {
+            const current = player.player;
+            if (current?.playerSource?.filename === original && current.resolvedFilename !== optimizedUrl) {
+                printLog("Switching to optimized video " + optimizedUrl);
+                player.reloadVideo();
+            }
+        }
+        // debounced as the screen size may change a few times while starting up
+        onSettingsKeyChanged: optimizerSettingsTimer.restart()
+    }
+
+    Timer {
+        id: optimizerSettingsTimer
+        interval: 1500
+        onTriggered: {
+            const current = player.player;
+            if (current?.resolvedFilename && current.resolvedSettingsKey !== videoOptimizer.settingsKey) {
+                printLog("Video optimization settings changed, reloading video");
+                player.reloadVideo();
+            }
+        }
+    }
+
     function setNextSource() {
         printLog("- Prev " + currentVideoIndex + ": " + currentSource.filename);
         currentVideoIndex = (currentVideoIndex + 1) % videosCount;
@@ -362,6 +394,7 @@ WallpaperItem {
             shouldPlay: main.playing
             audioFadeInOutDuration: main.configuration.AudioFadeInOutDuration * 1000
             loadAheadTime: main.configuration.LoadAheadTime
+            optimizer: videoOptimizer
         }
     }
     FastBlur {
@@ -410,6 +443,8 @@ WallpaperItem {
                     Layout.margins: Kirigami.Units.largeSpacing
                     text: {
                         let text = `player.filename: ${player.player.playerSource.filename}\n`;
+                        text += `player.resolvedFilename: ${player.player.resolvedFilename}\n`;
+                        text += `optimizer: ${videoOptimizer.settingsKey}\n`;
                         text += `main.currentSource.filename: ${main.currentSource.filename}\n`;
                         text += `videos:\n${main.videosConfig.map(v => {
                             const filenameParts = v.filename.split("/");
