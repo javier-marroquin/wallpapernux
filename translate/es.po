@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: reborn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 22:25-0600\n"
+"POT-Creation-Date: 2026-11-26 04:52+0000\n"
 "PO-Revision-Date: 2026-02-07 02:04-0600\n"
 "Last-Translator: Luis Bocanegra <luisbocanegra17b@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -568,7 +568,12 @@ msgid ""
 "API hardware encoding when available) and played instead of the originals. "
 "This greatly reduces the CPU/GPU usage of high resolution or high frame rate "
 "videos. The original files are never modified."
-msgstr "Se generan copias de los videos en segundo plano con FFmpeg (usando codificación por hardware VA-API cuando está disponible) y se reproducen en lugar de los originales. Esto reduce mucho el uso de CPU/GPU de los videos de alta resolución o con muchos fotogramas por segundo. Los archivos originales nunca se modifican."
+msgstr ""
+"Se generan copias de los videos en segundo plano con FFmpeg (usando "
+"codificación por hardware VA-API cuando está disponible) y se reproducen en "
+"lugar de los originales. Esto reduce mucho el uso de CPU/GPU de los videos "
+"de alta resolución o con muchos fotogramas por segundo. Los archivos "
+"originales nunca se modifican."
 
 #: package/contents/ui/config.qml:870
 #, kde-format
@@ -595,7 +600,9 @@ msgstr "Eliminar copias optimizadas"
 msgid ""
 "Frees the disk space used by the copies stored in %1, they will be generated "
 "again when needed."
-msgstr "Libera el espacio en disco usado por las copias guardadas en %1, se volverán a generar cuando se necesiten."
+msgstr ""
+"Libera el espacio en disco usado por las copias guardadas en %1, se volverán "
+"a generar cuando se necesiten."
 
 #: package/contents/ui/config.qml:932
 #, kde-format
@@ -1140,42 +1147,42 @@ msgstr "Todos los archivos"
 msgid "Video files"
 msgstr "Archivos de vídeo"
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "No video source \n"
 msgstr "No hay fuente de vídeo \n"
 
-#: package/contents/ui/main.qml:645
+#: package/contents/ui/main.qml:646
 #, kde-format
 msgid "Next Video"
 msgstr "Siguiente Vídeo"
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Pause"
 msgstr "Pausar"
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Play"
 msgstr "Reproducir"
 
-#: package/contents/ui/main.qml:657
+#: package/contents/ui/main.qml:658
 #, fuzzy, kde-format
 msgid "Default Playback"
 msgstr "Reproducción"
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Mute"
 msgstr "Silenciar"
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Unmute"
 msgstr "Habilitar sonido"
 
-#: package/contents/ui/main.qml:681
+#: package/contents/ui/main.qml:682
 #, fuzzy, kde-format
 msgid "Default Muting"
 msgstr "Por defecto"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: luisbocanegra.smart.video.wallpaper.reborn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 22:25-0600\n"
+"POT-Creation-Date: 2026-11-26 04:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1104,42 +1104,42 @@ msgstr ""
 msgid "Video files"
 msgstr ""
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "No video source \n"
 msgstr ""
 
-#: package/contents/ui/main.qml:645
+#: package/contents/ui/main.qml:646
 #, kde-format
 msgid "Next Video"
 msgstr ""
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Pause"
 msgstr ""
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Play"
 msgstr ""
 
-#: package/contents/ui/main.qml:657
+#: package/contents/ui/main.qml:658
 #, kde-format
 msgid "Default Playback"
 msgstr ""
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Mute"
 msgstr ""
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Unmute"
 msgstr ""
 
-#: package/contents/ui/main.qml:681
+#: package/contents/ui/main.qml:682
 #, kde-format
 msgid "Default Muting"
 msgstr ""

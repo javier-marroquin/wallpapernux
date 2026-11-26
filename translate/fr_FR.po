@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: luisbocanegra.smart.video.wallpaper.reborn\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-11-25 22:25-0600\n"
+"POT-Creation-Date: 2026-11-26 04:52+0000\n"
 "PO-Revision-Date: 2026-10-10 05:57+0200\n"
 "Last-Translator: Lorsoen <fashim99@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -1201,42 +1201,42 @@ msgstr "Tous les fichiers"
 msgid "Video files"
 msgstr "Fichiers vidéo"
 
-#: package/contents/ui/main.qml:418
+#: package/contents/ui/main.qml:419
 #, kde-format
 msgid "No video source \n"
 msgstr "Aucune source vidéo \n"
 
-#: package/contents/ui/main.qml:645
+#: package/contents/ui/main.qml:646
 #, kde-format
 msgid "Next Video"
 msgstr "Vidéo suivante"
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/main.qml:655
+#: package/contents/ui/main.qml:656
 #, kde-format
 msgid "Play"
 msgstr "Jouer"
 
-#: package/contents/ui/main.qml:657
+#: package/contents/ui/main.qml:658
 #, kde-format
 msgid "Default Playback"
 msgstr "Statut Pause par défaut"
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Mute"
 msgstr "Muet"
 
-#: package/contents/ui/main.qml:679
+#: package/contents/ui/main.qml:680
 #, kde-format
 msgid "Unmute"
 msgstr "Non muet"
 
-#: package/contents/ui/main.qml:681
+#: package/contents/ui/main.qml:682
 #, kde-format
 msgid "Default Muting"
 msgstr "Statut Muet par défaut"
